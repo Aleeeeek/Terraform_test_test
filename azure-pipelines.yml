@@ -6,7 +6,6 @@ pool:
   demands: Agent.Version -equals 3.246.0
  
   
-  vmImage: 'ubuntu-latest'
 
 stages:
 - stage: Plan
