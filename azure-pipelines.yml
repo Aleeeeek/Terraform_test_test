@@ -2,6 +2,7 @@ trigger:
 - main
 
 pool:
+  username: hai
   vmImage: 'ubuntu-latest'
 
 stages:
