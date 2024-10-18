@@ -1,26 +1,10 @@
-trigger:
-- main
+pool: vmImage: 'ubuntu-latest'
 
-pool:
-  name: Azure Pipelines
-  demands: Agent.Version -equals 3.246.0
+steps:
+- script: echo "HELLO, world"
+  displayName: "Run hello world script"
  
   
 
-stages:
-- stage: Plan
-  displayName: 'Terraform Plan'
-  jobs:
-  - job: TerraformPlan
-    displayName: 'Terraform Plan'
-    steps:
-    - task: TerraformInstaller@0
-      inputs:
-        terraformVersion: 'latest'
 
-    - script: |
-        terraform --version
-        terraform init -backend-config="storage_account_name=$(storageAccountName)" -backend-config="container_name=$(containerName)" -backend-config="key=$(key)" -backend-config="access_key=$(accessKey)"
-        terraform plan -out=tfplan
-      displayName: 'Terraform Init and Plan'
 
