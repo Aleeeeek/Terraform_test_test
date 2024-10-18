@@ -1,4 +1,5 @@
-pool: vmImage: 'ubuntu-latest'
+pool: 
+  vmImage: 'ubuntu-latest'
 
 steps:
 - script: echo "HELLO, world"
