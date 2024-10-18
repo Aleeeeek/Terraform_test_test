@@ -3,7 +3,7 @@ trigger:
 
 pool:
   name: Azure Pipelines
-  demands: Agent.Version -equals 2.144.0
+  demands: Agent.Version -equals 3.246.0
  
   
   vmImage: 'ubuntu-latest'
