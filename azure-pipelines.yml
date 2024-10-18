@@ -2,7 +2,10 @@ trigger:
 - main
 
 pool:
-  username: hai
+  name: Azure Pipelines
+  demands: 
+  - username: hai
+  
   vmImage: 'ubuntu-latest'
 
 stages:
